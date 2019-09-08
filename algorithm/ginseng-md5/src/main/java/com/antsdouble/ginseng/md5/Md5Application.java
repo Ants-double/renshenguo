@@ -17,6 +17,9 @@ public class Md5Application {
             System.out.println(GuavaCreate.createMd5("测试md5"));
             System.out.println(CommonsCreate.createMd5("测试md5"));
             // 加盐
+            String md5WithSalt = MessageDigestCreate.createMd5WithSalt("测试md5");
+            System.out.println(md5WithSalt);
+            System.out.println(MessageDigestCreate.verifyMd5WithSalt("测试md5",md5WithSalt));
 
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
