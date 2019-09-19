@@ -11,7 +11,7 @@ import java.util.Collections;
 public class LastStoneWeight {
     public static void main(String[] args) {
 
-        int[] test = new int[]{2,2};
+        int[] test = new int[]{2,2,5,6,3,2,9,4};
         System.out.println(solution(test));
     }
 
@@ -34,7 +34,7 @@ public class LastStoneWeight {
             }
             Arrays.sort(stones);
         }
-        while (!(stones[stones.length - 2] <= 0));
+        while (stones[stones.length - 2] > 0);
         result = stones[stones.length - 1];
         return result;
     }
