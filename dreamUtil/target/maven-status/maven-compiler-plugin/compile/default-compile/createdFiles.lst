@@ -1,0 +1,3 @@
+com\antsdouble\dreamutil\AntsDreamApplication.class
+com\antsdouble\dreamutil\beans\Person.class
+com\antsdouble\dreamutil\utils\FastJsonUtil.class
