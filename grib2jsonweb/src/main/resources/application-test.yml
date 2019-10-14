@@ -1,0 +1,22 @@
+# Spring boot application
+spring:
+  application:
+    name: grib2jsonweb
+
+server:
+  port: 9009
+
+
+# Services Versions
+services:
+  versions:
+    user:
+      v1: 1.0.0
+
+wind:
+  rootDir: D:/necp/wind25
+
+logging:
+  file: ./test.log
+  level:
+    com.antsdouble.grib2jsonweb: debug
