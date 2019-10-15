@@ -17,5 +17,6 @@ public class MyMap {
         map.put(01,01);
         map.put(02,02);
         System.out.println(map);
+
     }
 }
