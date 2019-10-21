@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.antsdouble.learndynamicdata.mapper.DataMapper">
+
+    <select id="getData" resultType="string">
+        SELECT id FROM t_role LIMIT 1
+    </select>
+    <select id="getData2" resultType="string">
+            select data from t_rawdata_b0_201801 limit 1
+    </select>
+
+</mapper>
