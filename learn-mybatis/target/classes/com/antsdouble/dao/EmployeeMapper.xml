@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.antsdouble.dao.EmployeeMapper">
+
+
+    <!--
+    getEmpByIdStep
+    1.查员工信息
+    2.查部门
+    -->
+
+    <resultMap id="myEmpByStep" type="com.antsdouble.bean.Employee">
+        <id column="id" property="id"></id>
+        <result column="last_name" property="lastName"/>
+        <result column="gender" property="gender"/>
+        <!--column传参-->
+        <association property="department" select="com.antsdouble.dao.DepartmentMapper.getDeptById" column="d_id">
+
+        </association>
+    </resultMap>
+    <select id="getEmpByIdStep" resultMap="myEmpByStep">
+        select  e.id id ,e.last_name last_name,e.gender gender,e.d_id d_id  from tb1_employee e where id =#{id}
+    </select>
+
+
+    <!--
+    id是唯一标识
+    resultType 返回值类型
+    -->
+    <!--getEmpByIdAndDept-->
+    <!--
+
+    SELECT e.id id ,e.last_name last_name,e.gender gender,e.d_id d_id ,d.id did,d.dept_name dept_name  FROM tb1_employee e,tb1_dept d
+    WHERE e.d_id=d.id and e.id=1
+    -->
+    <resultMap id="myDifEmp" type="com.antsdouble.bean.Employee">
+        <id column="id" property="id"></id>
+        <result column="last_name" property="lastName"></result>
+        <result column="gender" property="gender"></result>
+        <!--<result column="did" property="department.id"></result>-->
+        <!--<result column="dept_name" property="department.departmentName"></result>-->
+        <!--
+        javaType 级联的javabean引用
+        -->
+        <association property="department" javaType="com.antsdouble.bean.Department">
+            <id column="did" property="id"/>
+            <result column="dept_name" property="departmentName"/>
+        </association>
+
+    </resultMap>
+    <select id="getEmpByIdAndDept" resultMap="myDifEmp">
+SELECT e.id id ,e.last_name last_name,e.gender gender,e.d_id d_id ,d.id did,d.dept_name dept_name  FROM tb1_employee e,tb1_dept d
+WHERE e.d_id=d.id and e.id=#{id}
+    </select>
+    <resultMap id="myEmp" type="com.antsdouble.bean.Employee">
+        <!--id 主键 property 那个属性 id会优化-->
+        <id column="id" property=""></id>
+        <result column="last_name" property="lastName"></result>
+    </resultMap>
+    <select id="selectEmp" resultType="com.antsdouble.bean.Employee">
+        select id,last_name lastName,email,gender from tb1_employee where id = #{id}
+    </select>
+
+    <!--
+      public Employee getEmpById(Integer id);
+     -->
+    <select id="getEmpById" resultType="employee" databaseId="mysql">
+        select id,last_name ,email,gender from tb1_employee where id = #{id}
+    </select>
+
+    <!--会自动加载所有指定的数据库厂商的sql和没有指定的-->
+    <select id="getEmpById" resultType="employee" databaseId="postgresql">
+        select id,last_name ,email,gender from tb1_employee where id = #{id}
+    </select>
+    <!--
+        public void addEmp(Employee employee);
+        public void updateEmp(Employee employee);
+        public void deleteEmpById(Integer id);
+    -->
+
+    <!--
+    useGeneratedKeys 使用自增主键
+    keyProperty 获取的自增主键给那个属性
+    -->
+    <!--
+    resultType 返回的对应的javabean的类型
+    select nextval('employee_id_seq')
+    -->
+
+    <!--
+    mysql 支持自增主键，mybatis 利用statement.getGenreatekeys()
+    -->
+    <insert id="addEmp" parameterType="com.antsdouble.bean.Employee" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO tb1_employee (last_name,gender,email) VALUES(#{lastName},#{gender},#{email})
+    </insert>
+    <insert id="addEmp" parameterType="com.antsdouble.bean.Employee" databaseId="postgresql">
+
+        <selectKey keyProperty="id" order="AFTER" resultType="Integer">
+            select currval('employee_id_seq')
+        </selectKey>
+        INSERT INTO tb1_employee (last_name,gender,email) VALUES(#{lastName},#{gender},#{email})
+    </insert>
+
+    <update id="updateEmp">
+        update tb1_employee set last_name=#{lastName},email=#{email},gender=#{gender} where id =#{id}
+    </update>
+
+    <delete id="deleteEmpById">
+        delete from tb1_employee where id=#{id}
+    </delete>
+
+
+    <!--getEmpByIdAndLastName-->
+    <select id="getEmpByIdAndLastName" resultType="com.antsdouble.bean.Employee">
+        select id,last_name ,email,gender from tb1_employee where id = #{param1} and last_name=#{param2}
+    </select>
+
+</mapper>

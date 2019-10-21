@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.antsdouble.dao.EmployeeDynamicMapper">
+
+    <!--
+    getEmpByCondition
+    -->
+    <resultMap id="myEmpCon" type="com.antsdouble.bean.Employee">
+        <id column="id" property="id"/>
+        <result column="last_name" property="lastName"/>
+        <result column="gender" property="gender"/>
+        <result column="email" property="email"/>
+    </resultMap>
+    <!--
+    1.where 1=1 and 这是一种解决方案
+    2.mybatis可以使用where 标签把查询包含在内,自动的将and 或or 去掉 前提上and 放在前面
+    3.trim 就是拼接标签 prefix 前缀 prefixOverrides 前缀覆盖 suffix 后缀 suffixOverrides后缀覆盖
+    -->
+    <select id="getEmpByCondition" resultMap="myEmpCon">
+        select id,last_name,gender,email from tb1_employee
+        <!--<where>-->
+        <!--<if test="id!=null">-->
+        <!--id=#{id}-->
+        <!--</if>-->
+        <!--<if test="lastName!=null &amp;&amp; lastName!=&quot;&quot;">-->
+        <!--and last_name like #{lastName}-->
+        <!--</if>-->
+        <!--<if test="email!=null and email.trim()!=&quot;&quot;">-->
+        <!--and email=#{email}-->
+        <!--</if>-->
+        <!--<if test="gender==0 or gender ==1">-->
+        <!--and gender=#{gender}-->
+        <!--</if>-->
+
+        <!--</where>-->
+
+        <trim prefix="where" suffixOverrides="and">
+            <if test="id!=null">
+                id=#{id} and
+            </if>
+            <if test="lastName!=null &amp;&amp; lastName!=&quot;&quot;">
+                last_name like #{lastName}and
+            </if>
+            <if test="email!=null and email.trim()!=&quot;&quot;">
+                email=#{email}and
+            </if>
+            <if test="gender==0 or gender ==1">
+                gender=#{gender}
+            </if>
+        </trim>
+    </select>
+
+    <!--getEmpByConditionChoose-->
+    <select id="getEmpByConditionChoose" resultType="com.antsdouble.bean.Employee">
+        select * from tb1_employee
+        <where>
+            <choose>
+                <when test="id!=null">
+                    id=#{id}
+                </when>
+                <when test="lastName!=null">
+                    last_name=#{lastName}
+                </when>
+                <when test="gender!=null">
+                    gender=#{gender}
+                </when>
+                <otherwise>
+                    gender=0
+                </otherwise>
+            </choose>
+        </where>
+    </select>
+
+    <!--也可以用Trim标签来实现类似的功能-->
+    <update id="updateEmpByConditionSet">
+        update tb1_employee
+        <set>
+            <if test="lastName!=null">
+                last_name=#{lastName},
+            </if>
+            <if test="gender!=null">
+                gender=#{gender},
+            </if>
+            <if test="email!=null">
+                email=#{email},
+            </if>
+        </set>
+        where id =#{id}
+    </update>
+
+    <!--
+    separator 元素之间的分隔符
+    -->
+    <select id="getEmpByConditionForeach" resultType="com.antsdouble.bean.Employee">
+
+        <foreach collection="list" item="item_id" separator="," open="select  * from tb1_employee WHERE id in (" close=")">
+            #{item_id}
+        </foreach>
+    </select>
+</mapper>

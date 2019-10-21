@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--配置文件的编写是有顺序的，有先后的顺序-->
+    <!--
+    properties 1.可以使用properties来引入外部配置文件的内容
+    resource:类图径下的资源
+    url:引入网络路径或者磁盘文件下
+    -->
+    <properties resource="dbconfig.properties"></properties>
+
+
+
+    <!--全局设置-->
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="jdbcTypeForNull" value="NULL"></setting>
+    </settings>
+     <!--别名-->
+    <typeAliases>
+        <!--为某个javabean类型起别名，什么都不写会有一个默认别名（格式是类名的小写) alias指定一个新的别名-->
+        <!--<typeAlias type="com.antsdouble.bean.Employee" alias="emp"></typeAlias>-->
+        <!--批量起别名 package为某个包下的所有类，批量起别名 name 指定包名（包含子包） 都是默认的别名 别名不区分大小写-->
+        <!--如果有命名冲突可以使用在类上的注解来起别名-->
+        <package name="com.antsdouble.bean"></package>
+    </typeAliases>
+
+<!--环境，可以配置很多种环境 default 可以动态的切换不同的环境-->
+    <environments default="development">
+        <!--这是一个具体的环境信息 id就是当前环境的唯一想标识-->
+        <environment id="post">
+            <!--
+            事务管理器 jdbc 就是jdbc方式
+            managed 别名 最终用spring的事务管理
+            -->
+            <transactionManager type="JDBC"></transactionManager>
+            <!--数据源可以用连接池和不使用边接池，或者JNDI技术-->
+            <dataSource type="POOLED">
+                <property name="driver" value="${post.driver}"/>
+                <property name="url" value="${post.url}"/>
+                <property name="username" value="${post.name}"/>
+                <property name="password" value="${post.password}"/>
+            </dataSource>
+        </environment>
+
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.name}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--根据不同的数据库厂商，产生不同的sql-->
+    <databaseIdProvider type="DB_VENDOR">
+
+        <property name="MySQL" value="mysql"></property>
+        <property name="PostgreSQL" value="postgresql"></property>
+    </databaseIdProvider>
+    
+    
+    <!--sql映射文件，一定要写到全局文件中-->
+    <!--class 可以直接指定具体的类，基于注解的方式，可以直接指定，xml方式要放在同一目录下面-->
+    <mappers>
+        <!--<mapper resource="mappers/EmployeeMapper.xml"/>-->
+        <!--class 资源文件的相对位置保持一致-->
+        <!--<mapper class="com.antsdouble.dao.EmployeeMapper"></mapper>-->
+        <!--package 是使用批量注册的，指定具体的包名，文件和包名放在同包下面-->
+        <package name="com.antsdouble.dao"></package>
+    </mappers>
+
+</configuration>

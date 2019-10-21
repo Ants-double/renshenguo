@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.antsdouble.dao.DepartmentMapper">
+    <!--getDeptById-->
+
+    <resultMap id="myDept" type="com.antsdouble.bean.Department">
+        <id column="id" property="id"/>
+        <result column="dept_name" property="departmentName"/>
+    </resultMap>
+    <select id="getDeptById" resultMap="myDept">
+        select id,dept_name  from tb1_dept where  id =#{id}
+    </select>
+</mapper>
