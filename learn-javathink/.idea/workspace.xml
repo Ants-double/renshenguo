@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e1ff877d-991b-4d64-b36c-d5c729e9be9a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA基础/关键字-基础.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA基础/并发01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JAVA基础/注解01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/AntsDouble.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/out/production/AntsDouble/META-INF/AntsDouble.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/src/code/annotationdemo/PasswordUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/src/code/annotationdemo/Testable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/src/code/annotationdemo/UseCase.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/src/code/annotationdemo/UseCaseTracker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/src/code/code/threaddemo/Accessor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/src/code/code/threaddemo/CallableDemo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/src/code/code/threaddemo/LiftOff.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/src/code/code/threaddemo/MainThread.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/src/code/code/threaddemo/TaskWithResult.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/src/code/code/threaddemo/ThreadLocalVariableHolder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/src/code/eventdemo/MyEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/src/code/eventdemo/Source.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/src/code/eventdemo/StateChangeListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/src/code/eventdemo/StateChangeToOneListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/src/code/eventdemo/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/src/code/filedemo/ReadTxt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ants_double/AntsDouble/src/code/filedemo/WriteTxt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog-word/git-ssh.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog-word/http01.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog-word/java内存区域.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog-word/启动命令行相关参数.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog-word/垃圾收集与内存分配.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog-word/虚拟机相关工具.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/learn-javathink.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learn-redis/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../learn-redis/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../learn-redis/learn-redis.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../思继/学好编程的最佳方法是什么.md" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\mavenRepository" />
+        <option name="mavenHome" value="D:/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectId" id="1SUl1rstLmn5PxtxRWrwfxhLOqc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="F:/DesignPattern/PatternDesign" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.antsdouble.chapter21" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.TaskWithResultTest.feiboTest">
+    <configuration name="TaskWithResultTest.callableTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="learn-javathink" />
+      <option name="PACKAGE_NAME" value="com.antsdouble.chapter21" />
+      <option name="MAIN_CLASS_NAME" value="com.antsdouble.chapter21.TaskWithResultTest" />
+      <option name="METHOD_NAME" value="callableTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskWithResultTest.feiboTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="learn-javathink" />
+      <option name="PACKAGE_NAME" value="com.antsdouble.chapter21" />
+      <option name="MAIN_CLASS_NAME" value="com.antsdouble.chapter21.TaskWithResultTest" />
+      <option name="METHOD_NAME" value="feiboTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadTest.executorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="learn-javathink" />
+      <option name="PACKAGE_NAME" value="com.antsdouble.chapter21" />
+      <option name="MAIN_CLASS_NAME" value="com.antsdouble.chapter21.ThreadTest" />
+      <option name="METHOD_NAME" value="executorTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadTest.fixThreadTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="learn-javathink" />
+      <option name="PACKAGE_NAME" value="com.antsdouble.chapter21" />
+      <option name="MAIN_CLASS_NAME" value="com.antsdouble.chapter21.ThreadTest" />
+      <option name="METHOD_NAME" value="fixThreadTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ThreadTest.singleThreadTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="learn-javathink" />
+      <option name="PACKAGE_NAME" value="com.antsdouble.chapter21" />
+      <option name="MAIN_CLASS_NAME" value="com.antsdouble.chapter21.ThreadTest" />
+      <option name="METHOD_NAME" value="singleThreadTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TaskWithResultTest.feiboTest" />
+        <item itemvalue="JUnit.TaskWithResultTest.callableTest" />
+        <item itemvalue="JUnit.ThreadTest.singleThreadTest" />
+        <item itemvalue="JUnit.ThreadTest.fixThreadTest" />
+        <item itemvalue="JUnit.ThreadTest.executorTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TestHistory">
+    <history-entry file="ThreadTest_executorTest - 2019.04.10 at 10h 01m 53s.xml">
+      <configuration name="ThreadTest.executorTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ThreadTest_fixThreadTest - 2019.04.10 at 10h 12m 17s.xml">
+      <configuration name="ThreadTest.fixThreadTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ThreadTest_singleThreadTest - 2019.04.10 at 10h 15m 36s.xml">
+      <configuration name="ThreadTest.singleThreadTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskWithResultTest_callableTest - 2019.04.10 at 10h 24m 52s.xml">
+      <configuration name="TaskWithResultTest.callableTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskWithResultTest_callableTest - 2019.04.10 at 10h 25m 17s.xml">
+      <configuration name="TaskWithResultTest.callableTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskWithResultTest_feiboTest - 2019.04.10 at 10h 43m 18s.xml">
+      <configuration name="TaskWithResultTest.feiboTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskWithResultTest_feiboTest - 2019.04.10 at 10h 43m 48s.xml">
+      <configuration name="TaskWithResultTest.feiboTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskWithResultTest_feiboTest - 2019.04.10 at 10h 45m 17s.xml">
+      <configuration name="TaskWithResultTest.feiboTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskWithResultTest_feiboTest - 2019.04.10 at 10h 45m 44s.xml">
+      <configuration name="TaskWithResultTest.feiboTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TaskWithResultTest_feiboTest - 2019.04.10 at 10h 46m 13s.xml">
+      <configuration name="TaskWithResultTest.feiboTest" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
