@@ -1,0 +1,3 @@
+com\antsdouble\APP.class
+com\antsdouble\controller\SendMail.class
+com\antsdouble\beans\MailProperties.class

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lyy.taskroot.mapper.MailMapper">
+
+    <!--MialEntity SelectNoDailyUser();-->
+    <resultMap id="BaseMap" type="com.lyy.taskroot.po.MialEntity">
+        <id column="userId" property="id" jdbcType="INTEGER"/>
+        <result column="email" property="eMail" jdbcType="VARCHAR"/>
+		<result column="userName" property="userName" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="selectNoDailyUser" resultMap="BaseMap">
+
+SELECT
+	c.userId,
+	c.email,
+	c.userName
+FROM
+	(
+SELECT
+	a.userId,
+	a.userName,
+	a.email,
+	a.departmentID,
+	a.availability,
+	d.userId AS did
+FROM
+	everiseusers AS a
+	LEFT JOIN ( SELECT userId, dailyId FROM everisedaily WHERE TO_DAYS( dailyReportTime ) >= TO_DAYS( NOW( ) ) ) AS d ON a.userId = d.userId
+	) AS c
+WHERE
+	did IS NULL
+	AND availability = 1 AND departmentID  not in (10,17)
+ORDER BY
+	userId
+    </select>
+
+<!--getUserList-->
+	<select id="getUserList" resultMap="BaseMap">
+
+SELECT
+	c.userId,
+	c.email
+FROM
+	(
+SELECT
+	a.userId,
+	a.email,
+	a.availability,
+	d.userId as did
+FROM
+	everiseusers AS a
+	LEFT JOIN ( SELECT userId, dailyId FROM everisedaily WHERE TO_DAYS(dailyReportTime) >= TO_DAYS(NOW())) AS d ON a.userId = d.userId
+	) AS c WHERE did is NULL AND availability=1 ORDER  BY userId
+    </select>
+</mapper>
