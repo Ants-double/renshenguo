@@ -1,0 +1,34 @@
+
+spring:
+  application:
+    name: airqualityforecast-service-data-spider
+  datasource:
+    druid:
+      url: jdbc:mysql://192.168.15.154:3306/airqualityforecast?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=CTT
+      username: root
+      password: 456123
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+# MyBatis Config properties
+mybatis:
+  type-aliases-package: com.everise.airqualityforecast.commons.domain
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+server:
+  port: 9003
+logging:
+  level:
+    com.everise.airqualityforecast.service.data: debug
+  file: contentspider.log
+
+spider:
+  startTime: 2019-07-19 00:00:00
+  endTime: 2019-08-03 00:00:00
+  flag: 18
+  timePoint: 2018-12-30 00:00:00
+  city: 北京
