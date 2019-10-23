@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/luzhou-commonsdomain" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/luzhou-commonsdubbo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/luzhou-commonsmapper" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/luzhou-databases" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/luzhou-dependencies" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/luzhou-service-content-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/luzhou-service-content-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/luzhou-service-content-provider" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

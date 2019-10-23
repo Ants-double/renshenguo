@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="luzhou-databases" />
+        <module name="luzhou-commonsmapper" />
+        <module name="luzhou-service-content-api" />
+        <module name="luzhou-commonsdubbo" />
+        <module name="luzhou-service-content-consumer" />
+        <module name="luzhou-commonsdomain" />
+        <module name="luzhou-service-content-provider" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="luzhou-commons-domain" target="1.5" />
+      <module name="luzhou-commonsdomain" target="1.8" />
+      <module name="luzhou-commonsdubbo" target="1.8" />
+      <module name="luzhou-commonsmapper" target="1.8" />
+      <module name="luzhou-databases" target="1.8" />
+      <module name="luzhou-dependencies" target="1.8" />
+      <module name="luzhou-service-content-api" target="1.8" />
+      <module name="luzhou-service-content-consumer" target="1.8" />
+      <module name="luzhou-service-content-provider" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="luzhou-commonsdomain" options="-parameters" />
+      <module name="luzhou-commonsdubbo" options="-parameters" />
+      <module name="luzhou-commonsmapper" options="-parameters" />
+      <module name="luzhou-databases" options="-parameters" />
+      <module name="luzhou-service-content-api" options="-parameters" />
+      <module name="luzhou-service-content-consumer" options="-parameters" />
+      <module name="luzhou-service-content-provider" options="-parameters" />
+    </option>
+  </component>
+</project>

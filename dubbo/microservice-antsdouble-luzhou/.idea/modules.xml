@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/luzhou-commonsdomain/luzhou-commonsdomain.iml" filepath="$PROJECT_DIR$/luzhou-commonsdomain/luzhou-commonsdomain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/luzhou-commonsdubbo/luzhou-commonsdubbo.iml" filepath="$PROJECT_DIR$/luzhou-commonsdubbo/luzhou-commonsdubbo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/luzhou-commonsmapper/luzhou-commonsmapper.iml" filepath="$PROJECT_DIR$/luzhou-commonsmapper/luzhou-commonsmapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/luzhou-databases/luzhou-databases.iml" filepath="$PROJECT_DIR$/luzhou-databases/luzhou-databases.iml" />
+      <module fileurl="file://$PROJECT_DIR$/luzhou-dependencies/luzhou-dependencies.iml" filepath="$PROJECT_DIR$/luzhou-dependencies/luzhou-dependencies.iml" />
+      <module fileurl="file://$PROJECT_DIR$/luzhou-service-content-api/luzhou-service-content-api.iml" filepath="$PROJECT_DIR$/luzhou-service-content-api/luzhou-service-content-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/luzhou-service-content-consumer/luzhou-service-content-consumer.iml" filepath="$PROJECT_DIR$/luzhou-service-content-consumer/luzhou-service-content-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/luzhou-service-content-provider/luzhou-service-content-provider.iml" filepath="$PROJECT_DIR$/luzhou-service-content-provider/luzhou-service-content-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/microservice-antsdouble-luzhou.iml" filepath="$PROJECT_DIR$/.idea/microservice-antsdouble-luzhou.iml" />
+    </modules>
+  </component>
+</project>

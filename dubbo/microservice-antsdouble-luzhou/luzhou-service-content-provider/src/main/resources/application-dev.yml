@@ -1,0 +1,89 @@
+# Spring boot application
+spring:
+  application:
+    name: luzhou-service-content-provider
+  datasource:
+    druid:
+      url: jdbc:mysql://192.168.15.168:3306/luzhou?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=CTT
+      username: root
+      password: 456123
+      initial-size: 1
+      min-idle: 1
+      max-active: 20
+      test-on-borrow: true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 6669
+
+
+# MyBatis Config properties
+mybatis:
+  type-aliases-package: com.antsdouble.luzhou.commonsdomain
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    cache-enabled: true
+
+# Services Versions
+services:
+  versions:
+    content:
+      v1: 1.0.0
+
+# Dubbo Config properties
+dubbo:
+  ## Base packages to scan Dubbo Component：@com.alibaba.dubbo.config.annotation.Service
+  scan:
+    basePackages: com.antsdouble.luzhou.service.content.provider.api.impl
+  ## ApplicationConfig Bean
+  application:
+    id: luzhou-service-content-provider
+    name: luzhou-service-content-provider
+    qos-port: 22223
+    qos-enable: true
+  ## ProtocolConfig Bean
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 20882
+    status: server
+    serialization: kryo
+  ## RegistryConfig Bean
+  ##     address: zookeeper://192.168.15.168:2181?backup=192.168.10.131:2182,192.168.10.131:2183
+  registry:
+    id: zookeeper
+    address: zookeeper://192.168.15.13:2182
+
+
+# Enables Dubbo All Endpoints
+management:
+  endpoint:
+    dubbo:
+      enabled: true
+    dubbo-shutdown:
+      enabled: true
+    dubbo-configs:
+      enabled: true
+    dubbo-services:
+      enabled: true
+    dubbo-references:
+      enabled: true
+    dubbo-properties:
+      enabled: true
+  # Dubbo Health
+  health:
+    dubbo:
+      status:
+        ## StatusChecker Name defaults (default : "memory", "load" )
+        defaults: memory
+        ## StatusChecker Name extras (default : empty )
+        extras: load,threadpool
+logging:
+  level:
+    com.antsdouble: debug
+  file:
+    path: ./contentprovider.log
+#  pattern:
+#    console: "%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+#    file: "%d %p %c{1.} [%t] %m%n"

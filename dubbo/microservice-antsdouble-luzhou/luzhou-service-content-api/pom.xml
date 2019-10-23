@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <parent>
+        <groupId>com.antsdouble</groupId>
+        <artifactId>luzhou-dependencies</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../luzhou-dependencies/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>luzhou-service-content-api</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <url>http://www.antsdoubletech.com.cn/</url>
+    <inceptionYear>2019-October</inceptionYear>
+    <dependencies>
+        <dependency>
+            <groupId>com.antsdouble</groupId>
+            <artifactId>luzhou-commonsdomain</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
