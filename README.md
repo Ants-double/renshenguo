@@ -1,13 +1,11 @@
 # renshenguo
 ginseng fruit
 
-``` wiki
-代码的相关文档可以查看 https://www.cnblogs.com/ants_double
-或者
-https://github.com/Ants-double/huanhuncao
-```
+## 说明
 
+代码博客地址：[https://www.cnblogs.com/ants_double](https://www.cnblogs.com/ants_double)
 
+部分博客没有发布在git上的地址：[https://github.com/Ants-double/huanhuncao](https://github.com/Ants-double/huanhuncao)
 
 ### grib2jsonweb
 
