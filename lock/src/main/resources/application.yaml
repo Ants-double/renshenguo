@@ -1,0 +1,18 @@
+server:
+  port: 8999
+spring:
+  redis:
+    database: 0
+    host: 192.168.124.25
+    port: 6379
+    password: 1234
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1
+        max-idle: 8
+        min-idle: 0
+zk:
+  url: 192.168.124.25:2181
+  localPath: /newlock
+  timeout: 3000

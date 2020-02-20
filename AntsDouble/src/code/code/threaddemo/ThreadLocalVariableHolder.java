@@ -1,6 +1,5 @@
 package code.code.threaddemo;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Random;
 import java.util.concurrent.ExecutorService;
